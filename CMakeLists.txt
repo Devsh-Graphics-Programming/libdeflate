@@ -239,10 +239,6 @@ configure_file(libdeflate.pc.in libdeflate.pc @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libdeflate.pc
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
 
-# Add an empty libdeflate-targets.cmake file for the config to use. It can
-# be empty since we already defined the targets in add_subdirectory().
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/libdeflate-targets.cmake" "# Dummy file")
-
 # Generate a "libdeflate-targets.cmake" file in the build tree that can be
 # included by outside projects to import targets from the build tree.
 export(EXPORT libdeflate_exported_targets
